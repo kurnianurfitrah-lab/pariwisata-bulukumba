@@ -1,0 +1,150 @@
+/* Component Library CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  /* Button focus styles */
+  .btn:focus {
+    @apply outline-none ring-2 ring-offset-2;
+  }
+  
+  /* Input focus styles */
+  .input:focus,
+  .textarea:focus,
+  .select:focus {
+    @apply outline-none ring-2 ring-primary ring-offset-2 border-transparent;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:scale-[1.02];
+  }
+  
+  /* Loading animations */
+  .loading-spinner {
+    @apply animate-spin;
+  }
+  
+  .loading-dots {
+    @apply animate-pulse;
+  }
+  
+  .loading-ring {
+    @apply animate-ping;
+  }
+  
+  .loading-ball {
+    @apply animate-bounce;
+  }
+  
+  .loading-bars {
+    @apply animate-pulse;
+  }
+  
+  .loading-infinity {
+    @apply animate-spin;
+  }
+  
+  /* Modal backdrop */
+  .modal-backdrop {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm;
+  }
+  
+  /* Alert animations */
+  .alert-enter {
+    @apply opacity-0 transform translate-y-2;
+  }
+  
+  .alert-enter-active {
+    @apply opacity-100 transform translate-y-0 transition-all duration-200;
+  }
+  
+  .alert-exit {
+    @apply opacity-100 transform translate-y-0;
+  }
+  
+  .alert-exit-active {
+    @apply opacity-0 transform translate-y-2 transition-all duration-200;
+  }
+  
+  /* Table styles */
+  .table-responsive {
+    @apply overflow-x-auto;
+  }
+  
+  .table-cell {
+    @apply px-4 py-3 text-sm;
+  }
+  
+  .table-header {
+    @apply px-4 py-3 text-sm font-medium text-base-content/70 bg-base-200/50;
+  }
+  
+  /* Form field spacing */
+  .form-field {
+    @apply space-y-2;
+  }
+  
+  .form-row {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+  
+  /* Badge variants */
+  .badge-primary {
+    @apply bg-primary text-primary-content;
+  }
+  
+  .badge-secondary {
+    @apply bg-secondary text-secondary-content;
+  }
+  
+  .badge-success {
+    @apply bg-success text-success-content;
+  }
+  
+  .badge-error {
+    @apply bg-error text-error-content;
+  }
+  
+  .badge-warning {
+    @apply bg-warning text-warning-content;
+  }
+  
+  .badge-info {
+    @apply bg-info text-info-content;
+  }
+  
+  .badge-ghost {
+    @apply bg-base-200 text-base-content;
+  }
+  
+  .badge-outline {
+    @apply border-2 border-current text-current;
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  .transition-smooth {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
